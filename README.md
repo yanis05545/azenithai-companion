@@ -47,3 +47,9 @@ Kalau `webroot/index.html` di module diubah, UI app ikut berubah tanpa build ula
 - WebView hanya boleh menampilkan halaman milik module; navigasi ke URL lain dialihkan ke browser,
   karena halaman di dalamnya bisa menjalankan perintah root.
 - Ganti signing key = APK lama harus dicopot dulu; `app_install.sh` sudah menangani ini otomatis.
+
+## Build lewat Termux + GitHub Actions (tanpa PC)
+
+1. Taruh zip module di folder `module/`.
+2. Push repo ini ke GitHub (branch `main`). Workflow `.github/workflows/build.yml` jalan otomatis.
+3. Tab Actions > run terakhir > Artifacts: `module-with-app` (zip module sudah berisi APK) dan `AzenithAI-Companion-apk`.
